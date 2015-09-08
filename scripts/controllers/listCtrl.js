@@ -1,7 +1,7 @@
 todoapp.controller('mainCtrl', function ($scope, localStorageService) {
 	
 	if (!localStorageService.get("item1")){
-		localStorageService.set("item1", ["abc"]);
+		localStorageService.set("item1", []);
 		console.log(localStorageService.get("item1"));
 	}
 
@@ -15,6 +15,7 @@ todoapp.controller('mainCtrl', function ($scope, localStorageService) {
 		$scope.list.push($scope.new_item);
 		localStorageService.set("item1", $scope.list);
 		$scope.list = localStorageService.get("item1");
+		$scope.new_item = "";
 		console.log(localStorageService.get("item1"));
 	}
 

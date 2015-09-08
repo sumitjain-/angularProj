@@ -1,5 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+@mixin list_item(){
+	padding: 20px;
+    background: #B2DFDB;
+    margin-bottom: 10px;
+    width: 50%;
+    min-height: 16px;
+    position: relative;
+    border-radius: 1px;
+    border-left: solid 4px #fff;
+	padding-left: 16px;
+
+    span {
+    	font-size: 16px;
+    }
+
+    button {
+    	position: absolute;
+    	right: 0;
+	    background: #fff;
+	    border: none;
+	    padding: 4px 6px;
+	    margin: -10px 10px 0 0;
+	    font-size: 20px;
+	    border-radius: 1px;
+	    -webkit-transition:  all 0.2s;
+	    -o-transition:  all 0.2s;
+	    transition:  all 0.2s;
+
+	    &:hover {
+	    	cursor: pointer;
+		    background: #444;
+		    color: #eee;
+		    box-shadow: 2px 2px 5px 1px rgba(50,100,100,0.7);
+	    }
+
+	    &:focus {
+	    	outline: none;
+	    }
+    }
+}
+
 $teal: #009688;
 
 html, body {
@@ -28,4 +69,50 @@ header {
 		text-shadow: 0 0 1px rgba(0,150,136,0.9);
 
 	}
+}
+
+.list_container {
+	width: 95%;
+    margin-left: 5%;
+
+    ul {
+    	list-style-type: none;
+	    margin: 20px 0 0 0;
+	    padding: 0;
+
+	    li {
+	    	@include list_item();
+	    }
+    }
+
+    .new_item {
+    	@include list_item();
+    	margin-top: 0;
+    	background: #26A69A;
+
+    	input {
+    		background: transparent;
+    		width: 90%;
+    		border: none;
+    		font-size: 18px;
+    		-webkit-transition: all 0.2s;
+    		-o-transition: all 0.2s;
+    		transition: all 0.2s;
+
+    		&:focus {
+    			outline: none;
+    			border-bottom: solid #fff 1px;
+    			color: #fff;
+
+    		}
+
+    	}
+
+    	button {
+    		top: 50%;
+    		margin-top: -18px;
+    	}
+    }
+
+
 }
