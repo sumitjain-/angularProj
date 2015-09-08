@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="todoapp">
+<head>
+	<title>
+		New Angular App
+	</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div ng-controller="mainCtrl">
+	<header>
+		<h1>Simple To Do App</h1>
+	</header>
+	<ul>
+		<li ng-repeat="item in list track by $index " >
+			{{ item }}
+			<button ng-click="removeItem($index)" >Remove Item</button>
+		</li>
+	</ul>
+	<input type="text" ng-model="new_item" >
+	<button ng-click="addItem()" >Add</button>
+</div>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="angular-local-storage.min.js"></script>
+<script type="text/javascript">
+	var todoapp = angular.module('todoapp', ['LocalStorageModule']).config(function (localStorageServiceProvider) {
+		localStorageServiceProvider.setPrefix('todoapp');
+	});
+</script>
+<script type="text/javascript" src="scripts/controllers/listCtrl.js" ></script>
+</body>
+</html>
