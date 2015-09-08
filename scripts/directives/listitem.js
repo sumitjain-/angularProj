@@ -20,7 +20,7 @@ todoapp.directive('myListitem', function () {
 				angular.element(element.find("li")).addClass("focus");
 			})
 
-			element.find("form").on("submit", function () {
+			var editItem = function () {
 				if($form.find("input").val() == "" || $form.find("input").val() == null){
 					alert("Empty item!");
 					return;
@@ -30,7 +30,7 @@ todoapp.directive('myListitem', function () {
 
 				$span = angular.element(element.find("span")); $span.show();
 
-				$form = angular.element(this); $form.hide();
+				$form = element.find("form"); $form.hide();
 				angular.element($form.find("input")).focus();
 
 				scope.editItem(scope.$index, $form.find("input").val());
@@ -38,7 +38,11 @@ todoapp.directive('myListitem', function () {
 				element.find("span").html($form.find("input").val());
 
 				angular.element(element.find("li")).removeClass("focus");
-			});
+			};
+
+			element.find("form").on("submit", editItem);
+
+			element.find("input").on("blur", editItem);
 
 			return;
 		}
