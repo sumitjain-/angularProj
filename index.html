@@ -14,10 +14,7 @@
 	</header>
 	<div class="list_container" >
 		<ul class="main_list">
-			<li ng-repeat="item in list track by $index " >
-				<span ng-bind="item" ></span>
-				<button ng-click="removeItem($index)" title="Remove item" ><i class="fa fa-times" ></i></button>
-			</li>
+			<my-listitem ng-repeat="item in list track by $index" ></my-listitem>
 		</ul>
 		<div class="new_item" title="Add new item" >
 			<form ng-submit="addItem()"><input type="text" ng-model="new_item" ></form>
@@ -33,6 +30,7 @@
 		localStorageServiceProvider.setPrefix('todoapp');
 	});
 </script>
+<script type="text/javascript" src="scripts/directives/listitem.js"></script>
 <script type="text/javascript" src="scripts/controllers/listCtrl.js" ></script>
 </body>
 </html>

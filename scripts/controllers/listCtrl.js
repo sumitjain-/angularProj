@@ -25,6 +25,13 @@ todoapp.controller('mainCtrl', function ($scope, localStorageService) {
 		console.log(localStorageService.get("item1"));
 	}
 
+	$scope.editItem = function (index, val) {
+		$scope.list[index] = val;
+		localStorageService.set("item1", $scope.list);
+		console.log(localStorageService.get("item1"));
+		console.log($scope.list);
+	}
+
 	$scope.log = function (inp) {
 		console.log(inp);
 	}

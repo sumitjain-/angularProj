@@ -5,11 +5,33 @@
     background: #B2DFDB;
     margin-bottom: 10px;
     width: 50%;
-    min-height: 16px;
+    min-height: 17px;
     position: relative;
     border-radius: 1px;
     border-left: solid 4px #fff;
 	padding-left: 16px;
+
+	&.focus {
+		background: #26A69A;
+	}
+
+	input {
+		background: transparent;
+		width: 90%;
+		border: none;
+		font-size: 16px;
+		-webkit-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		transition: all 0.2s;
+
+		&:focus {
+			outline: none;
+			border-bottom: solid #fff 1px;
+			color: #fff;
+
+		}
+
+	}
 
     span {
     	font-size: 16px;
@@ -18,10 +40,11 @@
     button {
     	position: absolute;
     	right: 0;
+    	top: 50%;
 	    background: #fff;
 	    border: none;
 	    padding: 4px 6px;
-	    margin: -10px 10px 0 0;
+	    margin: -20px 10px 0 0;
 	    font-size: 20px;
 	    border-radius: 1px;
 	    box-shadow: 2px 2px 2px 1px rgba(40,80,80,0.7);
@@ -38,6 +61,10 @@
 	    	outline: none;
 	    }
     }
+
+    button.edit_item {
+		right: 40px;
+	}
 }
 
 $teal: #009688;
@@ -93,7 +120,7 @@ header {
     		background: transparent;
     		width: 90%;
     		border: none;
-    		font-size: 18px;
+    		font-size: 16px;
     		-webkit-transition: all 0.2s;
     		-o-transition: all 0.2s;
     		transition: all 0.2s;

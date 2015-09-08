@@ -33,20 +33,35 @@ header {
       background: #B2DFDB;
       margin-bottom: 10px;
       width: 50%;
-      min-height: 16px;
+      min-height: 17px;
       position: relative;
       border-radius: 1px;
       border-left: solid 4px #fff;
       padding-left: 16px; }
+      .list_container ul li.focus {
+        background: #26A69A; }
+      .list_container ul li input {
+        background: transparent;
+        width: 90%;
+        border: none;
+        font-size: 16px;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+        .list_container ul li input:focus {
+          outline: none;
+          border-bottom: solid #fff 1px;
+          color: #fff; }
       .list_container ul li span {
         font-size: 16px; }
       .list_container ul li button {
         position: absolute;
         right: 0;
+        top: 50%;
         background: #fff;
         border: none;
         padding: 4px 6px;
-        margin: -10px 10px 0 0;
+        margin: -20px 10px 0 0;
         font-size: 20px;
         border-radius: 1px;
         box-shadow: 2px 2px 2px 1px rgba(40, 80, 80, 0.7);
@@ -58,27 +73,44 @@ header {
           box-shadow: 3px 3px 5px 1px rgba(50, 100, 100, 0.8); }
         .list_container ul li button:focus {
           outline: none; }
+      .list_container ul li button.edit_item {
+        right: 40px; }
   .list_container .new_item {
     padding: 20px;
     background: #B2DFDB;
     margin-bottom: 10px;
     width: 50%;
-    min-height: 16px;
+    min-height: 17px;
     position: relative;
     border-radius: 1px;
     border-left: solid 4px #fff;
     padding-left: 16px;
     margin-top: 0;
     background: #26A69A; }
+    .list_container .new_item.focus {
+      background: #26A69A; }
+    .list_container .new_item input {
+      background: transparent;
+      width: 90%;
+      border: none;
+      font-size: 16px;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .list_container .new_item input:focus {
+        outline: none;
+        border-bottom: solid #fff 1px;
+        color: #fff; }
     .list_container .new_item span {
       font-size: 16px; }
     .list_container .new_item button {
       position: absolute;
       right: 0;
+      top: 50%;
       background: #fff;
       border: none;
       padding: 4px 6px;
-      margin: -10px 10px 0 0;
+      margin: -20px 10px 0 0;
       font-size: 20px;
       border-radius: 1px;
       box-shadow: 2px 2px 2px 1px rgba(40, 80, 80, 0.7);
@@ -90,11 +122,13 @@ header {
         box-shadow: 3px 3px 5px 1px rgba(50, 100, 100, 0.8); }
       .list_container .new_item button:focus {
         outline: none; }
+    .list_container .new_item button.edit_item {
+      right: 40px; }
     .list_container .new_item input {
       background: transparent;
       width: 90%;
       border: none;
-      font-size: 18px;
+      font-size: 16px;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s; }
