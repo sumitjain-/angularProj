@@ -49,14 +49,13 @@ header {
         margin: -10px 10px 0 0;
         font-size: 20px;
         border-radius: 1px;
+        box-shadow: 2px 2px 2px 1px rgba(40, 80, 80, 0.7);
         -webkit-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s; }
         .list_container ul li button:hover {
           cursor: pointer;
-          background: #444;
-          color: #eee;
-          box-shadow: 2px 2px 5px 1px rgba(50, 100, 100, 0.7); }
+          box-shadow: 3px 3px 5px 1px rgba(50, 100, 100, 0.8); }
         .list_container ul li button:focus {
           outline: none; }
   .list_container .new_item {
@@ -82,14 +81,13 @@ header {
       margin: -10px 10px 0 0;
       font-size: 20px;
       border-radius: 1px;
+      box-shadow: 2px 2px 2px 1px rgba(40, 80, 80, 0.7);
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s; }
       .list_container .new_item button:hover {
         cursor: pointer;
-        background: #444;
-        color: #eee;
-        box-shadow: 2px 2px 5px 1px rgba(50, 100, 100, 0.7); }
+        box-shadow: 3px 3px 5px 1px rgba(50, 100, 100, 0.8); }
       .list_container .new_item button:focus {
         outline: none; }
     .list_container .new_item input {
