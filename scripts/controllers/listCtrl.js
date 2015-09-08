@@ -20,9 +20,13 @@ todoapp.controller('mainCtrl', function ($scope, localStorageService) {
 	}
 
 	$scope.removeItem = function (index) {
-		$scope.list.splice(index, 1);
-		localStorageService.set("item1", $scope.list);
-		console.log(localStorageService.get("item1"));
+		if(confirm("Are you sure you want to remove "+ $scope.list[index]+ " from the list?")){
+			$scope.list.splice(index, 1);
+			localStorageService.set("item1", $scope.list);
+			console.log(localStorageService.get("item1"));
+		}else{
+			return;
+		}
 	}
 
 	$scope.editItem = function (index, val) {
