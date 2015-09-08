@@ -2,13 +2,13 @@
 
 Make sure you have npm, grunt and bower installed.
 
-  -Clone repo, go to repo home directory and run:
+  - Clone repo, go to repo home directory and run:
   ```
   $ npm install
   $ bower install
   ```
 
-  -Run
+  - Run
 
   ```
   $ grunt serve
