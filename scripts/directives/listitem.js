@@ -21,6 +21,11 @@ todoapp.directive('myListitem', function () {
 			})
 
 			element.find("form").on("submit", function () {
+				if($form.find("input").val() == "" || $form.find("input").val() == null){
+					alert("Empty item!");
+					return;
+				}
+
 				$button = angular.element(element.find("button")); $button.show();
 
 				$span = angular.element(element.find("span")); $span.show();
