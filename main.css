@@ -37,7 +37,9 @@ header {
       position: relative;
       border-radius: 1px;
       border-left: solid 4px #fff;
-      padding-left: 16px; }
+      padding-left: 16px;
+      color: #212121;
+      text-shadow: 0 0px 0px rgba(13, 13, 13, 0.1); }
       .list_container ul li.focus {
         background: #26A69A; }
       .list_container ul li input {
@@ -85,6 +87,8 @@ header {
     border-radius: 1px;
     border-left: solid 4px #fff;
     padding-left: 16px;
+    color: #212121;
+    text-shadow: 0 0px 0px rgba(13, 13, 13, 0.1);
     margin-top: 0;
     background: #26A69A; }
     .list_container .new_item.focus {
