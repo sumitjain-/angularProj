@@ -1,12 +1,9 @@
-todoapp.directive('myListitem', function () {
+todoapp.directive('myListitem', ['localStorageService' ,function (localStorageService) {
 	return {
 		restrict: 'E'
 		,templateUrl: "../../scripts/templates/listitem.html"
-		// ,scope: {
-		// 	list: "="
-		// }
+		,scope: false
 		,link: function (scope, element, attrs) {
-			console.log(scope.item);
 			angular.element(element.find("form")).hide();
 
 			element.find("button.edit_item").on("click", function () {
@@ -27,16 +24,14 @@ todoapp.directive('myListitem', function () {
 				}
 
 				$button = angular.element(element.find("button")); $button.show();
-
 				$span = angular.element(element.find("span")); $span.show();
-
 				$form = element.find("form"); $form.hide();
 				angular.element($form.find("input")).focus();
 
-				scope.editItem(scope.$index, $form.find("input").val());
+				scope.list[scope.$index] = $form.find("input").val();
+				localStorageService.set("item1", scope.list);
 
 				element.find("span").html($form.find("input").val());
-
 				angular.element(element.find("li")).removeClass("focus");
 			};
 
@@ -47,4 +42,4 @@ todoapp.directive('myListitem', function () {
 			return;
 		}
 	}
-})
+}])
