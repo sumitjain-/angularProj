@@ -14,7 +14,7 @@
 	</header>
 	<div class="list_container" >
 		<ul class="main_list">
-			<my-listitem ng-repeat="item in list track by $index" ></my-listitem>
+			<my-listitem ng-repeat="item in list | orderBy:item track by $index" ></my-listitem>
 		</ul>
 		<div class="new_item" title="Add new item" >
 			<form ng-submit="addItem()"><input type="text" ng-model="new_item" ></form>
